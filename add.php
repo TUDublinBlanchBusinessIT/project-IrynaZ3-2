@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Insert Data</title>
+    <title>Add Item</title>
 </head>
 <body>
-<h1>Add a Person Name</h1>
+
+<h2>Add New Item</h2>
 
 <form action="insert.php" method="POST">
     Name: <input type="text" name="name" required><br><br>
-    Email: <input type="email" name="email" required><br><br>
+    Description:<br>
+    <textarea name="description"></textarea><br><br>
     <button type="submit">Save</button>
 </form>
 
-<br><br>
-<a href="view.php">View All Records</a>
+<br>
+<a href="view.php">View Items</a>
 
 </body>
 </html>
