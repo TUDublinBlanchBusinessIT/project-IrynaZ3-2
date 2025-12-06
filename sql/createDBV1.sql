@@ -1,10 +1,9 @@
-CREATE DATABASE project_web;
+CREATE DATABASE moviedb;
+USE moviedb;
 
-USE project_web;
-
-CREATE TABLE items (
+CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    description TEXT,
+    movie_title VARCHAR(255),
+    review_text TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
