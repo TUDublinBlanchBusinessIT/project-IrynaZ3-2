@@ -15,4 +15,10 @@
         <td><?= $row['description'] ?></td>
         <td><?= $row['created'] ?></td>
         <td><?= $row['action'] ?></td>
-        
+</tr>
+<?php endwhile; ?>
+</table>
+<br>
+<a href="add.php">Add new item</a>
+</body>
+</html>
