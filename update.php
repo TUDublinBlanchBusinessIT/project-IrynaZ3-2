@@ -8,3 +8,10 @@ $description = $_POST['description'];
 $sql = "UPDATE items SET name = ?, description = ?, WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssi", $id, $name, $description);
+if ($stmt->execute()){
+    echo "item updated.<br><br>";
+} else {
+    echo "Error:" . $stmt->error;
+}
+echo "<a href='view.php'>Back to Items</a>";
+?>
