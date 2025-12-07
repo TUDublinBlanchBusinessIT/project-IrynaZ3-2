@@ -4,4 +4,6 @@
 Input movie title + comment
 Save into DB
 Display list of reviews
+
 \*\*Version 2 \\
+Add star Rating
