@@ -1,10 +1,7 @@
-# Header
+# Movie Review System
 
-\*\*Aspects \\
-
--Multiple database tables
--Login
--Drop down lists
--Rich forms
--Sessions
--Calculation based on a DataTime object.
+\*\*Version 1 \\
+Input movie title + comment
+Save into DB
+Display list of reviews
+\*\*Version 2 \\
