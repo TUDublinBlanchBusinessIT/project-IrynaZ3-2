@@ -1,5 +1,4 @@
-CREATE DATABASE moviedb;
-USE moviedb;
+USE movieid;
 
 CREATE TABLE genres (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -16,5 +15,5 @@ CREATE TABLE reviews (
     rating INT,
     genre_id INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (genre_id) REFERENCES genres(id)
+    FOREIGN KEY (genre_id) REFERENCES genres (id)
 );

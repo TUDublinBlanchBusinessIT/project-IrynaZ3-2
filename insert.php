@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'db/connect.php';
 
 $title = $_POST['title'];
 $review = $_POST['review'];

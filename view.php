@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'db/db.php';
 
 $sql = "SELECT reviews.*, genres.genre_name 
         FROM reviews 
