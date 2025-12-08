@@ -1,19 +1,19 @@
 <?php
-require 'db.php';
+include 'db.php';
 
-$name = $_POST['name'];
-$description = $_POST['description'];
+$title = $_POST['title'];
+$review = $_POST['review'];
+$rating = $_POST['rating'];
 
-$sql = "INSERT INTO items (name, description) VALUES (?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("ss", $name, $description);
+$sql = "INSERT INTO reviews (movie_title, review_text, rating)
+        VALUES ('$title', '$review', '$rating')";
 
-if ($stmt->execute()) {
-    echo "Item added successfully.<br><br>";
+if ($conn->query($sql)) {
+    echo "Review added successfully!<br>";
 } else {
-    echo "Error: " . $stmt->error;
+    echo "Error: " . $conn->error;
 }
 
-echo "<a href='add.php'>Add Another</a><br>";
-echo "<a href='view.php'>View All Items</a>";
+echo "<br><a href='index.php'>Add Another Review</a>";
+echo "<br><a href='view.php'>View All Reviews</a>";
 ?>
