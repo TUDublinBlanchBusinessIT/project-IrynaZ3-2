@@ -21,6 +21,21 @@
     <input type="radio" name="rating" value="4"> 4 Stars<br>
     <input type="radio" name="rating" value="5"> 5 Stars<br><br>
 
+    <label>Genre:</label><br>
+    <select name="genre" required>
+        <option value="">Select Genre</option>
+
+        <?php
+        $genres = $conn->query("SELECT * FROM genres");
+        while ($g = $genres->fetch_assoc()):
+        ?>
+            <option value="<?= $g['id']; ?>">
+                <?= $g['genre_name']; ?>
+            </option>
+        <?php endwhile; ?>
+
+    </select><br><br>
+
     <button type="submit">Submit Review</button>
 </form>
 
