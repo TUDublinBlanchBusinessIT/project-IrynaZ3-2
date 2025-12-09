@@ -1,5 +1,5 @@
-CREATE DATABASE movieid;
-USE movieid;
+CREATE DATABASE moviedb;
+USE moviedb;
 
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
